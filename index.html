@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الارشيف الالكتروني</title>
+    <title>الارشيف الالكتروني - المشاعر المقدسة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -105,29 +105,6 @@
             </div>
 
             <form id="uploadForm" class="space-y-5">
-                
-                <!-- Surveyor Name (Shared) -->
-                <div>
-                    <label class="block text-sm font-bold text-haj-dark mb-1">اسم الراصد *</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"><i class="fas fa-user-tie"></i></span>
-                        <select id="surveyorName" required class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-haj-primary focus:border-haj-primary outline-none transition-all appearance-none bg-white">
-                            <option value="" disabled selected>اختر اسم الراصد...</option>
-                            <option value="م مصطفى محمد حافظ">م مصطفى محمد حافظ</option>
-                            <option value="م عبدالعزيز خالد الصحفي">م عبدالعزيز خالد الصحفي</option>
-                            <option value="م احمد محمد الحرازي">م احمد محمد الحرازي</option>
-                            <option value="م عبدالعزيز سليم القرشي">م عبدالعزيز سليم القرشي</option>
-                            <option value="م انس عبدالعزيز المجنوني">م انس عبدالعزيز المجنوني</option>
-                            <option value="م عمار علي زبرماوي">م عمار علي زبرماوي</option>
-                            <option value="م احمد طلال الهلالي">م احمد طلال الهلالي</option>
-                            <option value="م اشرف ابراهيم عوض">م اشرف ابراهيم عوض</option>
-                            <option value="م اسلام محمد قنديل">م اسلام محمد قنديل</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- ================== HOUSING FIELDS ================== -->
                 <div id="housingFields" class="space-y-5 block">
@@ -332,7 +309,6 @@
             statusMessage.classList.add('hidden');
 
             try {
-                const surveyorName = document.getElementById('surveyorName').value;
                 const surveyDate = document.getElementById('surveyDate').value;
                 const files = fileInput.files;
 
@@ -344,7 +320,6 @@
 
                 const payload = {
                     formType: currentFormType,
-                    surveyorName,
                     surveyDate,
                     files: base64Files
                 };
